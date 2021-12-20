@@ -18,7 +18,7 @@ export const crearTodoHtml = ( todo ) => {
     const div = document.createElement('div');
     div.innerHTML = htmlTodo;
 
-    divTodoList.append( div );
+    divTodoList.append( div.firstChild );
 
-    return div;
+    return div.firstChild;
 }
