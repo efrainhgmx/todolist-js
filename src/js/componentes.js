@@ -22,8 +22,8 @@ export const crearTodoHtml = ( todo ) => {
 
     const div = document.createElement('div');
     div.innerHTML = htmlTodo;
+    divTodoList.append( div );
 
-    divTodoList.append( div.firstChild );
 
     return div.firstChild;
 }
@@ -32,8 +32,8 @@ export const crearTodoHtml = ( todo ) => {
 //Events
 
 txtInput.addEventListener('keyup', ( event ) => {
-
-	if( event.keyCode === 13 && txtInput.value.lenght > 0) {
+	
+	if( event.keyCode === 13 && (txtInput.value.length)) {
 		const nuevoTodo = new Todo(txtInput.value);
 		todoList.nuevoTodo( nuevoTodo );
 
