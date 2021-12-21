@@ -1,3 +1,7 @@
+import { Todo } from '../classes';
+
+import { todoList } from '../index';
+
 //Referencias HTML
 
 const divTodoList = document.querySelector('.todo-list');
@@ -23,3 +27,18 @@ export const crearTodoHtml = ( todo ) => {
 
     return div.firstChild;
 }
+
+
+//Events
+
+txtInput.addEventListener('keyup', ( event ) => {
+
+	if( event.keyCode === 13 && txtInput.value.lenght > 0) {
+		const nuevoTodo = new Todo(txtInput.value);
+		todoList.nuevoTodo( nuevoTodo );
+
+		crearTodoHtml( nuevoTodo );
+		txtInput.value = "";
+	}
+
+});
