@@ -42,3 +42,11 @@ txtInput.addEventListener('keyup', ( event ) => {
 	}
 
 });
+
+
+divTodoList.addEventListener('click', ( event ) => {
+
+	const nombreElemento = event.target.localName; //input, label, button;
+	const todoElement = event.target.parentElement.parentElement;
+
+});
