@@ -1,6 +1,7 @@
 //Referencias HTML
 
 const divTodoList = document.querySelector('.todo-list');
+const txtInput    = document.querySelector('.new-todo');
 
 
 export const crearTodoHtml = ( todo ) => {
