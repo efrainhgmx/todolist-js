@@ -49,10 +49,12 @@ divTodoList.addEventListener('click', ( event ) => {
 	const nombreElemento = event.target.localName; //input, label, button;
 	const todoElemento = event.target.parentElement.parentElement;
 	const todoId = todoElemento.getAttribute('data-id');
-
+console.log(divTodoList);
 	if( nombreElemento.includes('input') ) {
 		todoList.marcarCompletado( todoId );
 		todoElemento.classList.toggle('completed');
+	} else if( nombreElemento.includes('button')) {
+		todoList.eliminarTodo(todoId);
 	}
 
 });
