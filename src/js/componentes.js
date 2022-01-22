@@ -25,10 +25,10 @@ export const crearTodoHtml = ( todo ) => {
 
     const div = document.createElement('div');
     div.innerHTML = htmlTodo;
-    divTodoList.append( div );
+    divTodoList.append( div.firstElementChild );
 
 
-    return div.firstChild;
+    return div.firstElementChild;
 }
 
 
@@ -52,7 +52,7 @@ divTodoList.addEventListener('click', ( event ) => {
 	const nombreElemento = event.target.localName; //input, label, button;
 	const todoElemento = event.target.parentElement.parentElement;
 	const todoId = todoElemento.getAttribute('data-id');
-console.log(divTodoList);
+
 	if( nombreElemento.includes('input') ) {
 		todoList.marcarCompletado( todoId );
 		todoElemento.classList.toggle('completed');
