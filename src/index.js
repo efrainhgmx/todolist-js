@@ -3,11 +3,7 @@ import { crearTodoHtml } from './js/componentes';
 import './styles.css'; 
 
 export const todoList = new TodoList();
-const tarea = new Todo('Aprender JavaScript');
-console.log(tarea);
 
-todoList.nuevoTodo( tarea );
-
-console.log( todoList);
-
-crearTodoHtml( tarea );
+//todoList.forEach( todo => crearTodoHtml( todo ));
+//Esta linea es la misma que la anterior. solo si se pasa un argumento.
+todoList.forEach ( crearTodoHtml );
