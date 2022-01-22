@@ -4,10 +4,10 @@ import { todoList } from '../index';
 
 //Referencias HTML
 
-const divTodoList = document.querySelector('.todo-list');
-const txtInput    = document.querySelector('.new-todo');
-const btnBorrar = document.querySelector('.clear-completed');
-const ulFiltros = document.querySelector('.filters');
+const divTodoList   = document.querySelector('.todo-list');
+const txtInput      = document.querySelector('.new-todo');
+const btnBorrar     = document.querySelector('.clear-completed');
+const ulFiltros     = document.querySelector('.filters');
 const anchorFiltros = document.querySelectorAll('.filtro')
 
 
@@ -68,9 +68,10 @@ btnBorrar.addEventListener('click', () => {
 
 	for(let i = divTodoList.children.length - 1; i >= 0; i--) {
 		const elemento = divTodoList.children[i];
-		
+		console.log(elemento);
 		if(elemento.classList.contains('completed')) {
 			divTodoList.removeChild(elemento);
+			console.log("Elemento removido");
 		}
 	}
 });
